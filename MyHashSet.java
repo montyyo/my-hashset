@@ -135,4 +135,26 @@ public class MyHashSet
     {
         return numbers.length;
     }
+    
+    /**
+     * toString(): devuelve una cadena conteniendo todos los elementos
+     * del conjunto separados por comas y entre corchetes.
+     */
+    public String toString()
+    {
+        String number = "[" ;
+        for(int index = 0; index <numbers.length;index++)
+        {
+            if(index == 0)
+            {
+                number= number +( + numbers[index]);
+            }
+            else if (index>0)
+            {
+                number= number +(" ;" + numbers[index]);
+            }
+        }
+        number = number + "]";
+        return  number;
+    }
 }
