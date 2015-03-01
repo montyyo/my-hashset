@@ -46,4 +46,38 @@ public class MyHashSet
        }
        return exist;
    }
+   
+   /**
+    * clear(): vacía el conjunto.
+    */
+   public void clear()
+    {
+       
+       int[] newnumbers = new int[numbers.length ];
+        
+       numbers=newnumbers;
+    }
+    
+    /**
+     * contains(int elemento): devuelve verdadero si el conjunto
+     * contiene el elemento, falso en caso contrario.
+     */
+    public boolean contains(int elemento)
+    {
+        boolean find = false;
+        
+        int index=0;
+        
+        while(index < numbers.length && !find)
+        {
+             if(numbers[index]== elemento)
+            {
+                find = true;
+            }
+            index++;
+            
+        }
+        
+        return find;
+    }
 }
