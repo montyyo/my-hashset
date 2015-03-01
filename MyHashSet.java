@@ -80,4 +80,13 @@ public class MyHashSet
         
         return find;
     }
+    
+    
+    /**
+     * isEmpty(): devuelve verdadero si el conjunto no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        return (numbers.length == 0);
+    }
 }
