@@ -126,4 +126,13 @@ public class MyHashSet
         }
         return exist;
     }
+    
+    
+    /**
+     * size(): devuelve el número de elementos del conjunto.
+     */
+    public int size()
+    {
+        return numbers.length;
+    }
 }
