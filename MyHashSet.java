@@ -89,4 +89,41 @@ public class MyHashSet
     {
         return (numbers.length == 0);
     }
+    
+    /**
+     * remove(int elemento): elimina del conjunto el elemento dado. 
+     * Si no existiera devuelve falso; 
+     * si existía en el conjunto devuelve verdadero.
+     */
+    public boolean remove(int elemento)
+    {
+        boolean exist=false;
+        int index = 0;
+        int[] newnumbers = new int[numbers.length - 1];
+        while(numbers.length > index && !exist)
+        {
+            if(numbers[index]==elemento)
+            {
+                exist=true;
+                int pos=0;
+                while(pos < numbers.length)
+                {
+                    if(pos < index)
+                    {
+                        newnumbers[pos]= numbers[pos]; 
+                    }
+                    else if(pos > index)
+                    {
+                        newnumbers[pos -1]= numbers[pos]; 
+                    }
+                    pos++;
+                }
+                
+            }
+            
+            numbers=newnumbers;
+            index++;
+        }
+        return exist;
+    }
 }
