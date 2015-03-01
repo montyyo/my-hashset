@@ -157,4 +157,32 @@ public class MyHashSet
         number = number + "]";
         return  number;
     }
+    
+    /**
+     * equals(MiHashSet otroConjunto): devuelve verdadero si el
+     * parámetro es igual al conjunto sobre el que se invoca y
+     * falso en otro caso.
+     */
+    
+    public boolean equals(MyHashSet otroConjunto)
+    {
+        boolean equal=false;
+        int index = 0;
+        
+        if(otroConjunto.size() == numbers.length)
+        {
+            equal=true;
+            while(index<numbers.length && !equal)
+            {
+               // if(numbers[index] != otroConjunto.get(index))
+               // {
+               //     equal=false;
+               // }
+                index++;
+            }
+        }
+        
+        
+        return equal;
+    }
 }
