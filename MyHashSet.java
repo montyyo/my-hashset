@@ -172,12 +172,12 @@ public class MyHashSet
         if(otroConjunto.size() == numbers.length)
         {
             equal=true;
-            while(index<numbers.length && !equal)
+            while((index<numbers.length ))
             {
-               // if(numbers[index] != otroConjunto.get(index))
-               // {
-               //     equal=false;
-               // }
+               if( otroConjunto.contains(numbers[index])== false)
+                {
+                    equal=false;
+                }
                 index++;
             }
         }
@@ -185,4 +185,6 @@ public class MyHashSet
         
         return equal;
     }
+    
+  
 }
